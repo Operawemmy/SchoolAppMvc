@@ -12,5 +12,6 @@ namespace SchoolApp.Models.Context
         // setting up domain classes or entities
 
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Course> Courses { get; set; } 
     }
 }
