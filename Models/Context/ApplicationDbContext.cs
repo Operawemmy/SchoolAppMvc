@@ -13,5 +13,6 @@ namespace SchoolApp.Models.Context
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<Course> Courses { get; set; } 
+        public DbSet<Staff> Staffs { get; set; }
     }
 }
