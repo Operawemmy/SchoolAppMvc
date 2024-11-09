@@ -1,0 +1,46 @@
+﻿@model List<SchoolApp.Models.Entities.Department>
+<div>
+    <table class="table"> 
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Code
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var department in Model)
+            {
+                <tr>
+                    <td>
+                        @department.Id
+                    </td>
+                    <td>
+                        @department.Name
+                    </td>
+                    <td>
+                        @department.Description
+                    </td>
+                    <td>
+                        @department.Code
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p>
+        <a asp-action="AddDepartment">
+            Add New Department
+        </a>
+    </p>
+</div>

@@ -16,6 +16,7 @@ namespace SchoolApp.Models.Repositories.Implementations
         {
             //The method below use the context class to add a new department to the department table 
             _context.Departments.Add(department);
+            _context.SaveChanges();
             return department;
         }
 
@@ -23,6 +24,7 @@ namespace SchoolApp.Models.Repositories.Implementations
         public void DeleteDepartment(Department department)
         {
             _context.Departments.Remove(department);
+            _context.SaveChanges();
             
         }
 
@@ -42,6 +44,7 @@ namespace SchoolApp.Models.Repositories.Implementations
         public Department UpdateDepartment(Department department)
         {
             _context.Departments.Update(department);
+            _context.SaveChanges();
             return department;
         }
     }
